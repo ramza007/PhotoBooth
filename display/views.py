@@ -11,16 +11,9 @@ def welcome(request):
     return render (request, 'welcome.html')
 
 
-def display_day(request):
+def display_image(request):
     date = dt.date.today()
-    html = f'''
-        <html>
-            <body>
-                <h1> {date.day}-{date.month}-{date.year}</h1>
-            </body>
-        </html>
-            '''
-    return HttpResponse(html)
+    return render(request, 'today.html', {"date": date})
 
 
 def single_photo(request, photo_id):
