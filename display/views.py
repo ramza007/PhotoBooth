@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http  import HttpResponse
 import datetime as dt
 from display import urls
-from .models import Images
+from .models import Images, Tag
 
 # Create your views here.
 
