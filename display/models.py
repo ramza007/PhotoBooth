@@ -16,12 +16,11 @@ class Tag(models.Model):
 
 class Images(models.Model):
     """class to hold the photos"""
-    photo = models.ImageField(upload_to='Images/', null=True)
+    photo = models.ImageField(upload_to='Images/')
     name = models.CharField(max_length=30)
     descripton = models.TextField()
     location_taken = models.ForeignKey(Location, on_delete=True)
-    tag = models .ForeignKey(
-        Tag, on_delete=models.CASCADE, blank=True, null=True)
+    tag = models .ForeignKey(Tag, on_delete=models.CASCADE, blank=True, null=True)
     time_posted = models.DateTimeField(auto_now_add=True, null=True)
 
     def __str__(self):
@@ -45,3 +44,18 @@ class Images(models.Model):
         '''
         gotten_images = Images.objects.all()
         return gotten_images
+
+    @classmethod
+    def get_image_by_id(cls, id):
+        '''
+        Method that loopps through the class and pick an anticipated id
+        Returns:
+            selected_image : desired image
+        '''
+        selected_image = Images.objects.filter_by(id=id)
+        return selected_image
+
+    @classmethod
+    def search_by_title(cls, search_term):
+        pic = cls.objects.filter(name__icontains=search_term)
+        return pic
