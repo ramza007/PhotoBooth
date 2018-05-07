@@ -8,11 +8,21 @@ class Location(models.Model):
     """ class to indicate where the image was taken"""
     name = models.CharField(max_length=30)
 
+    def __str__(self):
+        return self.name
+
 
 class Tag(models.Model):
     """ class to indicate the category of the image"""
     name = models.CharField(max_length=30)
 
+    def __str__(self):
+        return self.name
+
+    @classmethod
+    def search_by_tag(cls, search_term):
+        tags = cls.objects.filter(name__icontains=search_term).all()
+        return tags
 
 class Images(models.Model):
     """class to hold the photos"""

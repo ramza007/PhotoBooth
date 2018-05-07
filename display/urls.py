@@ -10,5 +10,3 @@ urlpatterns = [
     url(r'^all/$', views.all_images, name='allImages'),
     url(r'^search/', views.search_results, name='search_results')
 ]
-
-
