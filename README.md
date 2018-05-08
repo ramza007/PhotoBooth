@@ -1,4 +1,4 @@
-# News Feed
+# PhotoBooth
 
 ### By **Ramza Reseni**, 
 #### Published date **06/05/18**
@@ -22,16 +22,16 @@ As a user I would like:
 ## Setup/Installation Requirements
 
 ### Prerequisites
-* Python 3.6.2
+* Python 3.6.5
 * Virtual environment
-* Postgres Database
+* PostgreSQL
 
 
 ### Installation Process
 * open my [GitHub](https://github.com/ramza007)
 * find my repo *PhotoBooth*
 * run `git clone REPO-URL` in your terminal
-* write `cd PhotoBoth`
+* write `cd PhotoBooth`
 * create a virtual environment with `python3.6 -m venv virtual`
 * enter virtual environment `. virtual/bin/activate`
 * run `pip install -r requirements.txt`
@@ -43,9 +43,16 @@ As a user I would like:
 ## Technologies Used
 - Python ( **ver 3.6** )
 - Django ( **ver 2.0.5** )
-- Bootstrap 3
-- Postgres Database
+- Django Bootstrap 3
+- PostgreSQL
 - Heroku
+
+### Acknowledgements
+
+- [Mark Murimi](https://github.com/markmurimi)
+- Stack Overflow
+- Google
+
 
 
 ### License under [***MIT***](https://github.com/ramza007/PhotoBooth/blob/master/LICENSE)
